@@ -1,23 +1,24 @@
-import React from 'react';
+import React from 'react'; 
 
-export default function Home() {
+export default function Home () {
     let count = 0;
     const addOne = () => {
-        console.log(addOne);
+        count++;
+        resetCounterApp();
     }
-    const minusOne = () => {
-        console.log(minusOne)
-    }
-    const resetButton = () => {
-        console.log(resetButton)
-    }
-    const resetB = 'resetButton'
-    return(
-        <div>
+
+    const resetCounterApp = () => {
+        return <div>
             <h1>Count: {count}</h1>
-            <button onClick={minusOne}>-1: {}</button>
-            <button onClick={resetButton} id={resetB}>Reset:</button>
             <button onClick={addOne}>+1</button>
+        </div>
+    }
+    resetCounterApp();
+    return (
+        <div>
+            <h1>{resetCounterApp(1)}</h1>
+            <h1>{addOne}</h1>
+            <h1>Count: {count}</h1>
         </div>
     );
 }
